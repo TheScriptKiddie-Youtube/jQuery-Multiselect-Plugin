@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery MultiSelect Element</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .demo-wrapper {
+            display: block;
+            max-width: 300px;
+            margin: 0px auto;
+        }
+
+        .demo-wrapper input {
+            width: 100%;
+            display: block;
+            margin: 5px auto;
+            padding: 10px 0px;
+            background: #eee;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <link rel="stylesheet" href="jquery.multiselect.css">
+</head>
+<body>
+    <div style="text-align: center; padding: 80px 20px;">
+        <h3>jQuery MultiSelect Dropdown</h3>
+        <p><a href="http://www.thescriptkiddie.com">TheScriptKiddie</a></p>
+    </div>
+    <div class="demo-wrapper">
+        <div id="multi-select">
+            <select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+            </select>
+    
+            <input type="text" name="selected_values" disabled="disabled" placeholder="Selected Values"/>
+        </div>
+            
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="jquery.multiselect.js"></script>
+    <script>
+        $(function(){
+            $("#multi-select").multiSelect({
+                label: "Select Options"
+            });
+        });
+    </script>
+</body>
+</html>
